@@ -34,9 +34,9 @@ function editAvatar() {
   function avatarFormSubmitHandler(evt) {
     evt.preventDefault();
     
-    const link = linkInput.value;        
-    submitButton.textContent = "Сохраняем...";
-    submitButton.disabled = true;
+    const link = linkInput.value;
+    submitButton.disabled = true;        
+    submitButton.textContent = "Сохраняем...";    
 
     changeAvatarRequest(link)    
       .then(() => {
@@ -70,8 +70,8 @@ function editProfile() /* Редактирование профиля */ {
   function profileFormSubmitHandler(evt) {
     evt.preventDefault();   // Чтобы форма не отправлялась сразу
     
-    submitButton.textContent = "Сохраняем...";
     submitButton.disabled = true;
+    submitButton.textContent = "Сохраняем...";    
     
     updateUserInfo(nameInput.value, profileBio.value)
       .then((answer) => {
@@ -128,9 +128,9 @@ function createCard() /* Создание карты */ {
   function cardFormSubmitHandler(evt) {
     evt.preventDefault();
 
-    submitButton.textContent = "Сохраняем...";
     submitButton.disabled = true;
-
+    submitButton.textContent = "Сохраняем...";
+    
     var newCardName = nameInput.value;
     var newCardLink = linkInput.value;
 
