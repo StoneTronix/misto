@@ -91,16 +91,16 @@ profileEditButton.addEventListener("click", editProfile);
 
 
 function cardHandler (evt) /* Обработчик действий внутри карт */ {  
-  // Обработчик висит "evt.currentTarget"
+  // Обработчик висит на "evt.currentTarget"
   const target = evt.target;  // На нём сработало событие
   const card = target.parentNode;
   const imagePopup = document.querySelector('.popup_type_image');
   const imagePopupClose = imagePopup.querySelector('.popup__close'); 
  
-  if (target.classList.contains('card__delete-button')) {     // Это кнопка удаления?    
+  if (target.classList.contains('card__delete-button')) {     // Это кнопка удаления?
     removeCard(target.parentNode);  // Передаётся карта
   }
-  else if (target.classList.contains('card__like-button')) {  // Это кнопка подобайки?
+  else if (target.classList.contains('card__like-button')) {  // Это кнопка подобайки?    
     likeCard(target.parentNode.parentNode.parentNode);
   }
   else if (target.classList.contains('card__image')) {        // Это изображение?
